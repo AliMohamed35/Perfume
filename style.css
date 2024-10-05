@@ -25,7 +25,7 @@ body {
 }
 .product-card {
   display: flex;
-  width: 577px;
+  width: 600px;
   height: 450px;
 }
 img {
@@ -37,7 +37,7 @@ img {
   border-radius: 0 0.625rem 0.625rem 0;
   padding: 2rem;
 
-  span {
+  > span {
     text-transform: uppercase;
     color: var(--Darkgrayishblue);
     font-family: "Montserrat", sans-serif;
@@ -58,5 +58,70 @@ img {
 
   p {
     color: var(--Darkgrayishblue);
+    font-size: 0.875rem;
+    line-height: 1.8;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+  }
+}
+.price {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.price {
+  margin-top: 1.5rem;
+
+  .old-price {
+    color: var(--Darkcyan);
+    font-family: "Fraunces", serif;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+}
+.price span:last-of-type {
+  font-size: 0.813rem;
+  align-self: center;
+  text-decoration: line-through;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: var(--Darkgrayishblue);
+}
+button {
+  background-color: var(--Darkcyan);
+  border: none;
+  border-radius: 0.5rem;
+  color: var(--White);
+  font-size: 0.875rem;
+  font-weight: 700;
+  width: 100%;
+  padding: 0.938rem 0;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  transition: 1s ease;
+
+  .icon-cart {
+    margin-right: 0.75rem;
+    width: 15px;
+    height: 16px;
+    fill: #fff;
+  }
+}
+button:hover {
+  background-color: hsl(158deg 36.57% 23.17%);
+}
+/****************************************************************/
+@media (max-width: 44rem) {
+  .product-card {
+    flex-direction: column;
+    width: 343px;
+    margin-bottom: 1.75rem;
+  }
+  .product-info {
+    border-radius: 0rem 0rem 0.625rem 0.625rem;
+  }
+  img {
+    display: block;
+    border-radius: 0.625rem 0.625rem 0 0;
   }
 }
